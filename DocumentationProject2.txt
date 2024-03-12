@@ -1,5 +1,5 @@
 ﻿Project 2 - Documentation
-Stefan Houkes: Made the online form and made sure that the programme reads the list of participants from there.
+Stefan Houkes: Made the online form and made sure that the programme reads the list of participants from there. Also made sure that the list of participants is read from the source again every time.
 Laura Hilgenga:
 Christiana Kyritsi:
 Anna Klisch: Edited the existing code in a way that it now randomly distributes the participants into groups of a by the user specified size. Also structured this code in a way that nobody ends up alone if the number of participants in not a multiple of the group size. Lastly, responsible for an output of the list with the groups.
@@ -9,7 +9,7 @@ Anna Klisch: Edited the existing code in a way that it now randomly distributes 
 
 Requirements:
 1. The program reads the list of participants from an online form (you can create one with Google Forms or MS Forms, for example), either directly or via a downloaded (.csv) file of responses. The form asks for name and e-mail address. If you like, you can include additional fields. → completed
-2. The set of signed-up participants can change in every round. Therefore the list of participants is read from the source again every time. 
+2. The set of signed-up participants can change in every round. Therefore the list of participants is read from the source again every time. --> completed
 3. The assignment of people into pairs or groups is random. → completed
 4. The group size is configurable. The program is not only able to generate pairs, but also groups of 3, 4, 5, … people. You may set an upper limit. → completed
 5. If the number of participants is not a multiple of the group size, the program distributes some participants differently (for example by making some groups smaller or larger). It does not happen that a participant is not matched with anyone. → completed
