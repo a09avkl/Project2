@@ -17,13 +17,6 @@ def generate_messages(groups, conversation_starters):
         messages.append(message)
     return messages
 
-# Simulated data for groups 
-groups = [
-    ["Alice", "Bob"],
-    ["Charlie", "David", "Emma"],
-    ["Frank", "Grace"]
-]
-
 # Simulated conversation starters file path
 conversation_starters_file = "conversation_starters.txt"
 
