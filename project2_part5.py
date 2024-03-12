@@ -58,31 +58,31 @@ nparticipants = copy.deepcopy(participants)
 new_pairs_found = False
 
 # try creating new pairing until successful
-group_size = int( input("How big should the groups be?"))
+group_size = int( input("How big should the groups be?")) # to determine the group size
 while not new_pairs_found:   # to do: add a maximum number of tries
   
-    # if odd number of participants, create one triple, then pairs
+    # if number of participants not multiple of group size
     if len(participants)%group_size != 0:
-        if len(participants)%group_size ==1:
+        if len(participants)%group_size ==1: #if just one participant without group, make one group that is one person bigger
             for i in range(group_size+1):
-                plist=[]
-                i=random.choice(nparticipants)
-                nparticipants.remove(i)
-                plist.append(i)
-            npairs.add(tuple(plist))
-        else:
+                glist=[] #this is a list with the groupmembers
+                i=random.choice(nparticipants) #choosing random participants until group size is reached
+                nparticipants.remove(i) #remove chosen partciipants from list to not sort tthem double
+                glist.append(i) #add chosen participants to group
+            npairs.add(tuple(glist))
+        else: #if there is more than one participant without griup just put them together in a group
             for i in range(len(participants)%group_size):
-                plist=[]
-                i=random.choice(nparticipants)
-                nparticipants.remove(i)
-                plist.append(i)
-            npairs.add(tuple(plist))
+                glist=[] #this is a list with the groupmembers
+                i=random.choice(nparticipants) #choosing random participants until group size is reached
+                nparticipants.remove(i) #remove chosen partciipants from list to not sort tthem double
+                glist.append(i)  #add chosen participants to group
+            npairs.add(tuple(glist))
                 
                 
 
-    # while still participants left to pair...
-    while len(nparticipants) > 0:
-        for i in range(group_size):
+    # while still participants left to group...
+    while len(nparticipants) > 0: # divide the rest into the chosen group size
+        for i in range(group_size): # code works same as above
             plist=[]
             i=random.choice(nparticipants)
             nparticipants.remove(i)
