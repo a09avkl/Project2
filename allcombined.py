@@ -147,10 +147,6 @@ with open(all_pairs_csv, mode) as file:
                 file.write(pair[i] + DELIMITER)
             else:
                 file.write(pair[i] + "\n")
-        
-# print finishing message
-print()
-print("Job done.")    
 # Function to read conversation starters from a file
 def read_conversation_starters(file_path):
     with open(file_path, "r") as file:
@@ -184,3 +180,8 @@ messages = generate_messages(groups, conversation_starters)
 for index, message in enumerate(messages):
     with open(f"group_{index + 1}_message.txt", "w") as file:
         file.write(message)
+
+        
+# print finishing message
+print()
+print("Job done.")    
