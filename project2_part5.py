@@ -64,15 +64,15 @@ while not new_pairs_found:   # to do: add a maximum number of tries
     # if number of participants not multiple of group size
     if len(participants)%group_size != 0:
         if len(participants)%group_size ==1: #if just one participant without group, make one group that is one person bigger
+            glist=[] #this is a list with the groupmembers
             for i in range(group_size+1):
-                glist=[] #this is a list with the groupmembers
                 i=random.choice(nparticipants) #choosing random participants until group size is reached
                 nparticipants.remove(i) #remove chosen partciipants from list to not sort tthem double
                 glist.append(i) #add chosen participants to group
             npairs.add(tuple(glist))
         else: #if there is more than one participant without griup just put them together in a group
+            glist=[] #this is a list with the groupmembers
             for i in range(len(participants)%group_size):
-                glist=[] #this is a list with the groupmembers
                 i=random.choice(nparticipants) #choosing random participants until group size is reached
                 nparticipants.remove(i) #remove chosen partciipants from list to not sort tthem double
                 glist.append(i)  #add chosen participants to group
@@ -82,8 +82,8 @@ while not new_pairs_found:   # to do: add a maximum number of tries
 
     # while still participants left to group...
     while len(nparticipants) > 0: # divide the rest into the chosen group size
+         plist=[]
         for i in range(group_size): # code works same as above
-            plist=[]
             i=random.choice(nparticipants)
             nparticipants.remove(i)
             plist.append(i)
