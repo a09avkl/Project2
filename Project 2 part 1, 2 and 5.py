@@ -85,9 +85,9 @@ group_size = int(input("How big should the groups be?"))
 # try creating new pairing until successful
 while not new_pairs_found:
     if len(participants) % group_size != 0:
-        if len(participants) % group_size <= 2:
+        if len(participants) % group_size == 1:
             glist = []
-            for i in range(group_size + (len(participants) % group_size)):
+            for i in range(group_size + 1):
                 i = random.choice(nparticipants)
                 nparticipants.remove(i)
                 glist.append(i)
