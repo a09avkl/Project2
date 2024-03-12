@@ -17,7 +17,7 @@ def generate_messages(groups, conversation_starters):
         messages.append(message)
     return messages
 
-# Simulated data for groups (replace this with your actual generated groups)
+# Simulated data for groups 
 groups = [
     ["Alice", "Bob"],
     ["Charlie", "David", "Emma"],
