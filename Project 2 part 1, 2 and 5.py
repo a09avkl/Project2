@@ -113,19 +113,17 @@ while not new_pairs_found:
         npairs = set()
         nparticipants = copy.deepcopy(participants)
         
-    
 # assemble output for printout
 output_string = "------------------------\n"
-output_string += "Today's coffee partners:\n"
-output_string += "------------------------\n"
+output_string += "Today's coffee groups:\n"
 
 for pair in npairs:
     pair = list(pair)
-    output_string += "* "
+    output_string += "------------------------\n"
     for i in range(len(pair)):
-        name_email_pair = f"{formdata[formdata[header_email] == pair[i]].iloc[0][header_name]} ({pair[i]})"
+        name_email_pair = f"Member {i+1}:{formdata[formdata[header_email] == pair[i]].iloc[0][header_name]} ({pair[i]})"
         if i < len(pair) - 1:
-            output_string += name_email_pair + ", "
+            output_string += name_email_pair + ", \n"
         else:
             output_string += name_email_pair + "\n"
 
@@ -158,4 +156,4 @@ with open(all_pairs_csv, mode) as file:
         
 # print finishing message
 print()
-print("Job done.")
+print("Job done.")    
