@@ -1,7 +1,7 @@
 ﻿Project 2 - Documentation
 Stefan Houkes: Made the online form and made sure that the programme reads the list of participants from there. Also made sure that the list of participants is read from the source again every time.
 Laura Hilgenga:
-Christiana Kyritsi:
+Christiana Kyritsi: Wrote a script that generated messages for coffe meeting groups, including random conversation starters and printed those messages without saving them into files. Also created the text file named conversation_starters.txt for use in the script.
 Anna Klisch: Edited the existing code in a way that it now randomly distributes the participants into groups of a by the user specified size. Also structured this code in a way that nobody ends up alone if the number of participants in not a multiple of the group size. Lastly, responsible for an output of the list with the groups.
 
 
