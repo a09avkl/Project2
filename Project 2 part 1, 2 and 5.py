@@ -18,6 +18,7 @@ sheet_id = "1Y8XrBRt952oFlihPI8hn5KWcJ57n9zXULrlBXFn-LqI"
 df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv")
 
 # Printing the full list of respondents (including the date on which the forms was filled in)
+print("These are the participants that signed up:")
 print(df)
 
 # Path to the CSV file
@@ -84,9 +85,9 @@ group_size = int(input("How big should the groups be?"))
 # try creating new pairing until successful
 while not new_pairs_found:
     if len(participants) % group_size != 0:
-        if len(participants) % group_size == 1:
+        if len(participants) % group_size <= 2:
             glist = []
-            for i in range(group_size + 1):
+            for i in range(group_size + (len(participants) % group_size)):
                 i = random.choice(nparticipants)
                 nparticipants.remove(i)
                 glist.append(i)
