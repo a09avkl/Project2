@@ -153,14 +153,6 @@ def read_conversation_starters(file_path):
         conversation_starters = file.readlines()
     return conversation_starters
 
-import random
-
-# Function to read conversation starters from a file
-def read_conversation_starters(file_path):
-    with open(file_path, "r") as file:
-        conversation_starters = file.readlines()
-    return conversation_starters
-
 # Function to generate messages for all groups
 def generate_messages(groups, conversation_starters):
     messages = []
@@ -172,20 +164,21 @@ def generate_messages(groups, conversation_starters):
         messages.append(message)
     return messages
 
-# Simulated conversation starters file path
-conversation_starters_file = "conversation_starters.txt"
-
 # Read conversation starters from file
+conversation_starters_file = "conversation_starters.txt"
 conversation_starters = read_conversation_starters(conversation_starters_file)
 
 # Generate messages for all groups
-messages = generate_messages(groups, conversation_starters)
+messages = generate_messages(npairs, conversation_starters)
 
 # Save messages to text files
 for index, message in enumerate(messages):
     with open(f"group_{index + 1}_message.txt", "w") as file:
         file.write(message)
-        
+
+# Print confirmation message
+print("The messages have been generated and saved to text files.\n")
+
 # print finishing message
 print()
 print("Job done.")    
