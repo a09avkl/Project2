@@ -265,13 +265,20 @@ conversation_starters = read_conversation_starters(conversation_starters_file)
 # Generate messages for all groups
 messages = generate_messages(npairs, conversation_starters)
 
-# Save messages to text files
+# Save messages to text files and print messages for each group
 for index, message in enumerate(messages):
+    # Print the message for the current group
+    print(f"Group {index + 1} Message:")
+    print(message)
+    print('-' * 50)  # Separator for clarity
+    
+    # Save the message to a text file
     with open(f"group_{index + 1}_message.txt", "w") as file:
         file.write(message)
 
 # Print confirmation message
-print("The messages with the conversation starters have been generated and saved to text files.\n")
+print("Messages have been generated and saved to text files.\n")
+
 
 # print finishing message
 print()
