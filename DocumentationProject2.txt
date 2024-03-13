@@ -1,5 +1,7 @@
 ﻿Project 2 - Documentation
 
+Title: Coffe Conversator
+
 
 Stefan Houkes: Made the online form and made sure that the programme reads the list of participants from there. Also made sure that the list of participants is read from the source again every time.
 
@@ -29,7 +31,7 @@ Requirements:
 
 8. The program generates messages to all groups which address the participants by name, inform them about having been matched for a meeting, and include the conversation starter. It saves these messages in one or multiple text files. -->completed
 
-9. Create a new name for your version of Mystery Coffee. 
+9. Create a new name for your version of Mystery Coffee. --> completed (Coffe Conversator)
 
 
 Running instructions:
