@@ -46,10 +46,10 @@ header_name = "What is your name?"
 header_email = "What is your e-mail?"
 
 # path to CSV file that stores the pairings of this round
-new_pairs_csv = "Coffee Partner Lottery new pairs.csv"
+new_pairs_csv = "Coffee Conversator new groups.csv"
 
 # path to CSV file that stores all pairings (to avoid repetition)
-all_pairs_csv = "Coffee Partner Lottery all pairs.csv"
+all_pairs_csv = "Coffee Conversator all groups.csv"
 
 
 # init set of old pairs
