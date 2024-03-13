@@ -1,7 +1,12 @@
 ﻿Project 2 - Documentation
+
+
 Stefan Houkes: Made the online form and made sure that the programme reads the list of participants from there. Also made sure that the list of participants is read from the source again every time.
+
 Laura Hilgenga: Wrote the code to ditribute participants into groups of random size, if that is desired by the user.
+
 Christiana Kyritsi: Wrote a script that generated messages for coffe meeting groups, including random conversation starters and printed those messages without saving them into files. Also created the text file named conversation_starters.txt for use in the script.
+
 Anna Klisch: Edited the existing code in a way that it now randomly distributes the participants into groups of a by the user specified size if the user wants to choose the size. Also structured this code in a way that nobody ends up alone if the number of participants in not a multiple of the group size. Lastly, responsible for an output of the list with the groups.
 
 
@@ -9,19 +14,29 @@ Anna Klisch: Edited the existing code in a way that it now randomly distributes 
 
 Requirements:
 1. The program reads the list of participants from an online form (you can create one with Google Forms or MS Forms, for example), either directly or via a downloaded (.csv) file of responses. The form asks for name and e-mail address. If you like, you can include additional fields. → completed
+
 2. The set of signed-up participants can change in every round. Therefore the list of participants is read from the source again every time. --> completed
+
 3. The assignment of people into pairs or groups is random. → completed
+
 4. The group size is configurable. The program is not only able to generate pairs, but also groups of 3, 4, 5, … people. You may set an upper limit. → completed
+
 5. If the number of participants is not a multiple of the group size, the program distributes some participants differently (for example by making some groups smaller or larger). It does not happen that a participant is not matched with anyone. → completed
+
 6. When the matching is finished, the program prints out the generated pairs/groups to the screen in nice, readable formatting. → completed
-7. In every round the program provides a new conversation starter (for example a joke, a statement to debate or a question to answer). The program reads these from a local file. The conversation starter is also printed to the screen. --> partly completed
+
+7. In every round the program provides a new conversation starter (for example a joke, a statement to debate or a question to answer). The program reads these from a local file. The conversation starter is also printed to the screen. --> completed
+
 8. The program generates messages to all groups which address the participants by name, inform them about having been matched for a meeting, and include the conversation starter. It saves these messages in one or multiple text files. -->completed
+
 9. Create a new name for your version of Mystery Coffee. 
 
 
 Running instructions:
 1. Make sure the list of participants is not empty.
 2. Run the python code. It will first output a list of the participants that signed up.
-3. The programme will ask you what size you want the groups to be. Here, give the number of participants you want in each group as an input and hit enter.
-4. The programme will give you a list with the groups. This list included the names of all the participants as well as their email addresses.
-5. If the number of participants is not a multiple of the group size, remaining participants will either be added to one of the existing groups or form their own group. It is therefore possible that one group is significantly smaller than the others, but nobody ever ends up alone.
+3. The programme will ask you if you want to choose the group size yourself or want a random group size. It only accepts "d" or "r" as input.
+4. If you chose to choose the groupsize yourself, the program,e will ask you what size you want the groups to be. Here, give the number of participants you want in each group as an input and hit enter.
+5. The programme will give you a list with the groups. This list included the names of all the participants as well as their email addresses.
+6. If the number of participants is not a multiple of the group size, remaining participants will either be added to one of the existing groups or form their own group. It is therefore possible that one group is significantly smaller than the others, but nobody ever ends up alone.
+7. The programme also generates a message to each group including the email adresses of the members and a conversation starter. These messages will be printed to the screen as well as saved as txt files.
